@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+
+
+
+    <style>
+        #recommendMenu{
+          list-style: none;
+        }
+
+        #recommendListItem{
+          color: red;
+        }
+
+
+    </style>
+   <h1>GeeksforGeeks</h1>
+   <ul id="recommendMenu"></ul>
+	<script>
+	
+		
+
+
+let link = ["https://www.google.com","https://www.youtube.com"];
+let name = ["Google","Youtube"];
+
+
+
+let menu = document.getElementById('recommendMenu');
+
+
+for(i = 0; i <name.length; i++){
+
+  let li = document.createElement('li');
+  let div = document.createElement('div');
+  let br = document.createElement('br');
+  div.setAttribute("id","recommendListItem");
+
+  li.innerHTML = "<a href='"+ link[i] +"'>"+ name[i]+"</a>";
+
+  menu.appendChild(li);
+ 
+  
+  
+
+
+}
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+	</script>
+
+  </body>
+</html>
