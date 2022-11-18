@@ -8,6 +8,7 @@
     <style>
         #recommendMenu{
           list-style: none;
+          
         }
 
         #recommendListItem{
@@ -15,17 +16,52 @@
         }
 
 
+        #linkID{
+          text-decoration: none;
+        }
+         
+        #allRecommeded{
+
+          border-style: none;
+          
+         
+          width: 40%;
+        }
+
+        #recommendTitle{
+         text-align: center;
+         font-family: Arial, Helvetica, sans-serif
+         
+        }
+
+        #listItems{
+          text-align: left;
+          
+        }
+
+      
+
+#descriptionText{
+  font-size: 12px;
+}
+        
+
+
+
     </style>
-   <h1>GeeksforGeeks</h1>
+
+    <div id = "allRecommeded">
+   <p id = "recommendTitle">RECOMMEND</p>
    <ul id="recommendMenu"></ul>
+    </div>
 	<script>
 	
 		
 
 
-let link = ["https://www.google.com","https://www.youtube.com"];
-let name = ["Google","Youtube"];
-
+let link = ["https://www.google.com","https://www.youtube.com","https://www.yahoo.com"];
+let name = ["Google","Youtube","Yahoo"];
+let description = ["Lorem ipsum dolor sit amet sit amet sit amet...","Lorem ipsum dolor sit amet...","Lorem ipsum dolor sit amet..."];
 
 
 let menu = document.getElementById('recommendMenu');
@@ -34,14 +70,21 @@ let menu = document.getElementById('recommendMenu');
 for(i = 0; i <name.length; i++){
 
   let li = document.createElement('li');
+
   let div = document.createElement('div');
   let br = document.createElement('br');
+  
   div.setAttribute("id","recommendListItem");
 
-  li.innerHTML = "<a href='"+ link[i] +"'>"+ name[i]+"</a>";
+
+  li.innerHTML = "<div id ='listItems'>"  + "<a id = 'linkID'href='"+ link[i] +"'>"+ name[i] + "<br>" + "<div id='descriptionText'>"+ description[i] +"</div>" + "</a>" + "</div>";
+
+  //li.innerHTML = "<div id ='testID'>"  + "<a href='"+ link[i] +"'>"+ name[i]+"</a>" + "</div>" + description[i];
+
+  //li.innerHTML = "<a href='"+ link[i] +"'>"+ name[i]+"</a>" ;
 
   menu.appendChild(li);
- 
+  menu.appendChild(br);
   
   
 
